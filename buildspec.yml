@@ -18,7 +18,8 @@ phases:
       - npm run test:ci
   post_build:
     commands:
-      - aws s3 sync ./dist/angular-devops s3://angular-devops-production --acl 'public-read' --delete
+      - aws s3 rm s3://<prac.springframework> --recursive
+      - aws s3 cp dist/angular-devops/ s3://<prac.springframework> --recursive
 
 artifacts:
   files:
