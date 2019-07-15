@@ -18,8 +18,8 @@ phases:
       - npm run test:ci
   post_build:
     commands:
-      - aws s3 rm s3://bmo-dev --recursive
-      - aws s3 cp dist/angular-devops/ s3://bmo-dev --recursive
+      - aws s3 rm s3://bmo-dev2 --recursive
+      - aws s3 cp dist/angular-devops/ s3://bmo-dev2 --recursive
 
 artifacts:
   files:
